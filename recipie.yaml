@@ -1,0 +1,19 @@
+$engine: 3
+$onesync: on
+name: Mithril
+version: 3.1.0
+author: Tabarra
+description: Recipe for the base resources required to run a minimal FiveM server.
+
+tasks: 
+  # Download default CFX resources
+  - action: download_github
+    src: https://github.com/swxy/NoPixelServer.git
+    ref: 0169fdddaa9511558cfa17bcf80a832f56c359ff
+    subpath: resources
+    dest: ./resources
+
+  # Download default server.cfg
+  - action: download_file
+    url: https://raw.githubusercontent.com/swxy/NoPixelServer/main/server.cfg
+    path: ./server.cfg
